@@ -1,37 +1,41 @@
 package baitap;
 
-import java.util.Scanner;
 
-class Student {
 
-    public String name;
-    public float Java_score, C_socre;
+public class baitap1 {
+ private double radius;
+ private String color;
 
-    Scanner dt = new Scanner(System.in);
+ public baitap1() {
+  
+ }
+ public baitap1(double radius) {
+  this.radius = radius;
+ }
+ public baitap1(double radius, String color) {
+  this.radius = radius;
+  this.color = color;
+ }
 
-    Student() {
-        System.out.print("Nhap ten hoc sinh :");
-        name = dt.nextLine();
-        System.out.print("Nhap diem Java :");
-        Java_score = dt.nextFloat();
-        System.out.print("Nhap diem C :");
-        C_socre = dt.nextFloat();
-    }
 
-    public void displayInfo() {
-        System.out.println("Ho ten sinh vien :" + name);
-        System.out.println("Diem Java cua hoc sinh :" + Java_score);
-        System.out.println("Diem C cua hoc sinh :" + C_socre);
-        System.out.println("Diem trung binh :" + (Java_score + C_socre) / 2);
-    }
-}
+ public double getRadius() {
+  return radius;
+ }
 
-class baitap {
-    public static void main(String[] args) {
-        Student cn = new Student();
-        Student cm = new Student();
-        cn.displayInfo();
-        cm.displayInfo();
+ public void setRadius(double radius) {
+  this.radius = radius;
+ }
 
-    }
+ public String getColor() {
+  return color;
+ }
+
+ public void setColor(String color) {
+  this.color = color;
+
+ }
+
+ public double getArea() {
+  return radius * radius * Math.PI;
+ }
 }
